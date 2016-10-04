@@ -1,12 +1,15 @@
 // @flow
 import React from 'react'
 
-const add = (x: number) => x
-add('')
+interface Hoge {
+  hoge: string;
+}
+
+const add = (x: Hoge) => x
 
 const App = () => (
   <div>
-    <h1>aaaajfieowajioeaaaaaaa tssyo</h1>
+    <h1>aaaajfieowajioeaaaaaa  aa a tssyo</h1>
     <p>helab aaaaaaafjieowafjeiowafjioeaw  aa</p>
   </div>
 )
