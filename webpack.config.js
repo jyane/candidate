@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 
+const FlowStatusWebpackPlugin = require('flow-status-webpack-plugin');
 const Dashboard = require('webpack-dashboard');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
@@ -19,14 +20,18 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/'
   },
   cache: true,
   devtool: 'eval',
   resolve: { root: [ path.resolve('.') ] },
   plugins: [
-    new DashboardPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin(),
+    new FlowStatusWebpackPlugin({
+      failOnError: true
+    }),
+    new DashboardPlugin()
   ],
   module: {
     preLoaders: [{
@@ -56,7 +61,8 @@ module.exports = {
     noInfo: true,
     inline: true,
     colors: true,
-    contentBase: '.'
+    contentBase: '.',
+    publicPath: '/dist/'
   }
 };
 
