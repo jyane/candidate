@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "start": "webpack-dashboard -c cyan -- webpack-dev-server",
-    "watch": "webpack -w",
-    "serve": "webpack-dev-server",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "flow": "flow check --all",
+    "build": "webpack -p webpack.prod.config.js"
   },
   "repository": {
     "type": "git",

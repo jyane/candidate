@@ -1,11 +1,8 @@
-// @flow
 import React from 'react'
 
-interface Hoge {
-  hoge: string;
-}
+const add = (x: number, y: number) => x + y + ''
 
-const add = (x: Hoge) => x
+console.log(add('', 2));
 
 const App = () => (
   <div>

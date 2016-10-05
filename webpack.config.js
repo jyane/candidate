@@ -29,6 +29,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new FlowStatusWebpackPlugin({
+      flowArgs: '--all',
       failOnError: true
     }),
     new DashboardPlugin()

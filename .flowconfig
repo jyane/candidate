@@ -1,12 +1,15 @@
 [ignore]
-.*/node_modules/.*
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/dist/.*
+<PROJECT_ROOT>/webpack.config.js
+<PROJECT_ROOT>/package.json
 
 [include]
-.*/src/.*
 
 [libs]
 
 [options]
 module.file_ext=.js
 module.file_ext=.css
+module.use_strict=true
 esproposal.class_static_fields=enable
