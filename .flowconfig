@@ -2,7 +2,9 @@
 <PROJECT_ROOT>/node_modules/.*
 <PROJECT_ROOT>/dist/.*
 <PROJECT_ROOT>/webpack.config.js
+<PROJECT_ROOT>/webpack.prod.config.js
 <PROJECT_ROOT>/package.json
+<PROJECT_ROOT>/src/index.js
 
 [include]
 
@@ -12,4 +14,5 @@
 module.file_ext=.js
 module.file_ext=.css
 module.use_strict=true
+module.name_mapper='^src\/(.*)$' -> '<PROJECT_ROOT>/src\/\1'
 esproposal.class_static_fields=enable

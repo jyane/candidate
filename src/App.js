@@ -1,13 +1,13 @@
 import React from 'react'
 
-const add = (x: number, y: number) => x + y + ''
+import styles from './App.css'
 
-console.log(add('', 2));
+const add = (x: number, y: string) => x + y + ''
 
 const App = () => (
-  <div>
-    <h1>aaaajfieowajioeaaaaaa  aa a tssyo</h1>
-    <p>helab aaaaaaafjieowafjeiowafjioeaw  aa</p>
+  <div className={styles.app}>
+    <h1>Hello World</h1>
+    <p>Hello World</p>
   </div>
 )
 

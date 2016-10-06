@@ -19,9 +19,9 @@ module.exports = {
   resolve: { root: [ path.resolve('.') ] },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       output: {
@@ -29,8 +29,7 @@ module.exports = {
       },
       compress: {
         warnings: false
-      },
-      sourceMap: false
+      }
     })
   ],
   module: {
@@ -41,7 +40,7 @@ module.exports = {
     }, {
       test:   /\.css$/,
       loaders: [
-        'style?sourceMap',
+        'style',
         'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
         'postcss'
       ]
