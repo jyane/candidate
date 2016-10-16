@@ -9,7 +9,6 @@
     "browser": true
   },
   "plugins": [
-    "flowtype-errors",
     "react"
   ],
   "ecmaFeatures": {
