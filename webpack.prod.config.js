@@ -44,6 +44,9 @@ module.exports = {
         'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
         'postcss'
       ]
+    }, {
+      test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+      loader: 'file-loader?name=[name].[ext]'
     }]
   },
   postcss: () => [autoprefixer, precss],
