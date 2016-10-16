@@ -6,7 +6,8 @@
     "start": "webpack-dashboard -c cyan -- webpack-dev-server",
     "lint": "eslint .",
     "flow": "flow check --all",
-    "build": "webpack -p --config webpack.prod.config.js"
+    "build": "flow && webpack -p --config webpack.prod.config.js",
+    "yarn": "npm install yarn && yarn install"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "eslint": "^3.7.0",
     "eslint-loader": "^1.5.0",
     "eslint-plugin-react": "^6.3.0",
+    "file-loader": "^0.9.0",
     "flow-bin": "^0.33.0",
     "flow-status-webpack-plugin": "^0.1.7",
     "postcss-loader": "^0.13.0",
@@ -40,9 +42,11 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dashboard": "^0.2.0",
-    "webpack-dev-server": "^1.16.1"
+    "webpack-dev-server": "^1.16.1",
+    "yarn": "^0.15.1"
   },
   "dependencies": {
+    "file-loader": "^0.9.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",

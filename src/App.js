@@ -1,13 +1,22 @@
 import React from 'react'
 
 import styles from './App.css'
+import svg from './logo.svg'
 
-const add = (x: number, y: string) => x + y + ''
-
+// test comment
+/**
+ * Test comment
+ */
 const App = () => (
-  <div className={styles.app}>
-    <h1>Hello World</h1>
-    <p>Hello World</p>
+  <div className={styles.root}>
+    { console.log('Can you see this?') }
+    <div className={styles.header}>
+      <img className={styles.logo} src={svg} alt="logo" />
+      <h1>Welcome to the V3 candidate environment.</h1>
+    </div>
+    <div className={styles.intro}>
+      <p>Hello World</p>
+    </div>
   </div>
 )
 

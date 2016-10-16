@@ -24,7 +24,7 @@ module.exports = {
   },
   cache: true,
   devtool: 'eval',
-  resolve: { root: [ path.resolve('.') ] },
+  resolve: { root: [path.resolve('.')] },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
@@ -48,9 +48,12 @@ module.exports = {
       test:   /\.css$/,
       loaders: [
         'style?sourceMap',
-        'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+        'css?root=.&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
         'postcss'
       ]
+    }, {
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        loader: 'file-loader?name=[name].[ext]'
     }]
   },
   postcss: () => [autoprefixer, precss],
