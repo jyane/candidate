@@ -1,0 +1,2 @@
+declare export default string
+

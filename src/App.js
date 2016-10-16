@@ -1,7 +1,7 @@
 import React from 'react'
 
-import styles from './App.css'
-import svg from './logo.svg'
+import styles from 'src/App.css'
+import svg from 'src/logo.svg'
 
 // test comment
 /**
