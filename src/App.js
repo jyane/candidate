@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 
 import configureStore from 'src/store';
-import Todo from 'src/containers/Todo';
+import Todos from 'src/containers/Todos';
 
 import styles from 'src/App.css';
 import svg from 'src/logo.svg';
@@ -25,7 +25,7 @@ const App = () => (
       <div className={styles.intro}>
         <p>Hello World</p>
       </div>
-      <Todo />
+      <Todos />
     </div>
   </Provider>
 );
