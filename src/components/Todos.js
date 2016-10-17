@@ -13,8 +13,8 @@ const Todos = ({ todos, current, addTodo, updateCurrent }: Props) => (
       }
       <form onSubmit={(e: Event) => {
         e.preventDefault();
-        updateCurrent('');
         addTodo(current);
+        updateCurrent('');
       }}>
         <input
           type="text"
@@ -22,7 +22,8 @@ const Todos = ({ todos, current, addTodo, updateCurrent }: Props) => (
           onChange={(e: Event) => {
             e.preventDefault();
             updateCurrent((e.target: any).value)
-        }} />
+          }}
+        />
         <button type="submit">Add Todo</button>
       </form>
     </div>
