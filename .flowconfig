@@ -11,9 +11,9 @@
 [libs]
 
 [options]
+all=true
 module.file_ext=.js
 module.use_strict=true
-module.name_mapper='^src\/(.*)$' -> '<PROJECT_ROOT>/src\/\1'
 
 module.name_mapper='^\(.*\)\.ico$' -> '<PROJECT_ROOT>/libs/files.js'
 module.name_mapper='^\(.*\)\.jpg$' -> '<PROJECT_ROOT>/libs/files.js'
@@ -29,6 +29,8 @@ module.name_mapper='^\(.*\)\.woff$' -> '<PROJECT_ROOT>/libs/files.js'
 module.name_mapper='^\(.*\)\.woff2' -> '<PROJECT_ROOT>/libs/files.js'
 
 module.name_mapper='^\(.*\)\.css$' -> '<PROJECT_ROOT>/libs/css.js'
+
+module.name_mapper='^src\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
 
 esproposal.class_static_fields=enable
 esproposal.class_instance_fields=enable
