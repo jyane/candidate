@@ -2,7 +2,7 @@ import React from 'react';
 import * as Redux from 'redux';
 import { connect } from 'react-redux';
 
-import type { State } from 'src/types/states';
+import type { State } from 'src/states';
 import * as Actions from 'src/actions/todo';
 import Todos from 'src/components/Todos';
 
@@ -12,8 +12,8 @@ type StateProps = {|
 |};
 
 const mapStateToProps = (state: State): StateProps => ({
-  todos: state.todo.todos,
-  current: state.todo.current
+  todos: state.todo.get('todos'),
+  current: state.todo.get('current')
 });
 
 type DispatchProps = {|

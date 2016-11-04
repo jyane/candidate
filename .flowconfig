@@ -3,7 +3,6 @@
 <PROJECT_ROOT>/dist/.*
 <PROJECT_ROOT>/webpack.config.js
 <PROJECT_ROOT>/webpack.prod.config.js
-<PROJECT_ROOT>/package.json
 <PROJECT_ROOT>/src/index.js
 
 [include]
@@ -15,6 +14,7 @@ all=true
 module.file_ext=.js
 module.use_strict=true
 
+module.name_mapper='^immutable$' -> '<PROJECT_ROOT>/libs/immutable.js'
 module.name_mapper='^\(.*\)\.ico$' -> '<PROJECT_ROOT>/libs/files.js'
 module.name_mapper='^\(.*\)\.jpg$' -> '<PROJECT_ROOT>/libs/files.js'
 module.name_mapper='^\(.*\)\.jpeg$' -> '<PROJECT_ROOT>/libs/files.js'

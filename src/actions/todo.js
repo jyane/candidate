@@ -1,4 +1,4 @@
-import type { todoAction } from 'src/types/actions'
+import type { todoAction } from 'src/actions/actionTypes';
 
 const addTodo = (todo: string): todoAction => ({
   type: 'ADD_TODO',
