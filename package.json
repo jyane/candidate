@@ -1,0 +1,47 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "NO_LICENSE",
+  "scripts": {
+    "start": "webpack-dashboard -c cyan -- webpack-dev-server",
+    "lint": "eslint .",
+    "flow": "flow",
+    "production:build": "flow && webpack -p --config webpack.prod.config.js"
+  },
+  "dependencies": {
+    "axios": "^0.15.2",
+    "immutable": "^3.8.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-observable": "^0.12.1",
+    "rxjs": "^5.0.0-rc.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.5.1",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.0",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.9.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.5.0",
+    "file-loader": "^0.9.0",
+    "flow-bin": "^0.34.0",
+    "flow-status-webpack-plugin": "^0.1.7",
+    "postcss-loader": "^1.1.0",
+    "precss": "^1.4.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dashboard": "^0.2.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

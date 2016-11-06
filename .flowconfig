@@ -1,0 +1,34 @@
+[ignore]
+*/node_modules/.*
+<PROJECT_ROOT>/src/index.js
+
+[include]
+.*/src/.*
+
+[libs]
+
+[options]
+module.file_ext=.js
+module.use_strict=true
+
+module.name_mapper='^\(.*\)\.ico$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.jpg$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.jpeg$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.png$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.gif$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.eot$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.otf$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.webp$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.svg$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.ttf$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.woff$' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.woff2' -> '<PROJECT_ROOT>/libs/files.js'
+module.name_mapper='^\(.*\)\.css$' -> '<PROJECT_ROOT>/libs/css.js'
+
+module.name_mapper='^src\(.*\)$' -> '<PROJECT_ROOT>/src/\1'
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.export_star_as=enable
+
