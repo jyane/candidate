@@ -1,8 +1,0 @@
-dist
-node_modules
-flow-typed
-
-# misc
-.DS_Store
-.env
-npm-debug.log
