@@ -10,6 +10,7 @@ const userSearch = (state: UserSearch = initialState, action: UserSearchAction):
     case 'USER_SERACH':
       return state;
     case 'USER_SERACH_SUCCESS':
+      console.log(action.res)
       return state;
     case 'USER_SEARCH_FAILURE':
       return state;

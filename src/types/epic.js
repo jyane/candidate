@@ -8,9 +8,9 @@ import type { Store } from 'redux';
  */
 
 // Original extended interface of redux-observable.
-interface ReduxObservable<A> extends Observable<A> {
-  ofType(type: string): Observable<A>;
+interface ActionObservable<A> extends Observable<A> {
+  ofType(arg: string): Observable<A>;
 }
 
-export type Epic<A> = (action$: ReduxObservable<A>, store?: Store<*>) => Observable<A>;
+export type Epic<A> = (action$: ActionObservable<A>, store?: Store<*>) => Observable<A>;
 

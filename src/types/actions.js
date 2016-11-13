@@ -5,7 +5,7 @@ type UpdateCurrent = { type: 'UPDATE_CURRENT', value: string };
 export type TodoAction = AddTodo | UpdateCurrent;
 
 type UserSearch = { type: 'USER_SEARCH' };
-type UserSearchSuccess = { type: 'USER_SERACH_SUCCESS' };
+type UserSearchSuccess = { type: 'USER_SERACH_SUCCESS', res: Object };
 type UserSearchFailure = { type: 'USER_SEARCH_FAILURE' };
 export type UserSearchAction = UserSearch | UserSearchSuccess | UserSearchFailure;
 
